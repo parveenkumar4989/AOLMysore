@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happiness Program — Mysore</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sky-top:#FFF9EE;
+    --sky-horizon:#FBE7BE;
+    --sun:#E2933A;
+    --sun-soft:#F1B15E;
+    --teal:#1F4048;
+    --teal-soft:#3E6A70;
+    --ivory:#FFFCF5;
+    --panel:#FFFFFF;
+    --line:#EAD9B8;
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  *{box-sizing:inherit;}
+  html{scroll-padding-top:env(safe-area-inset-top,0px);}
+  html,body{height:100%;}
+  body{
+    margin:0;
+    background:var(--ivory);
+    color:var(--teal);
+    font-family:"Karla",-apple-system,sans-serif;
+  }
+  h1,h2{font-family:"Fraunces",Georgia,serif;}
+
+  .sky{
+    position:relative;
+    padding:44px 24px 0;
+    background:linear-gradient(180deg, var(--sky-top) 0%, var(--sky-horizon) 100%);
+  }
+  .sky-scene{
+    position:relative;
+    width:100%;
+    max-width:340px;
+    margin:0 auto;
+    height:190px;
+  }
+  .sky-scene svg{position:absolute;inset:0;width:100%;height:100%;}
+  .swan-emoji{
+    position:absolute;
+    left:50%;
+    bottom:34px;
+    transform:translateX(-50%);
+    font-size:64px;
+    line-height:1;
+    filter:drop-shadow(0 3px 4px rgba(60,40,10,0.18));
+  }
+
+  .wrap{max-width:600px;margin:0 auto;padding:0 24px 64px;position:relative;}
+
+  header{text-align:center;margin-bottom:8px;}
+  .eyebrow{
+    font-size:0.82rem;
+    letter-spacing:0.06em;
+    color:var(--sun);
+    margin:0 0 10px;
+    font-weight:600;
+  }
+  h1{
+    font-size:2.4rem;
+    font-weight:600;
+    line-height:1.1;
+    margin:0 0 16px;
+    color:var(--teal);
+  }
+  .dates{
+    font-size:1.05rem;
+    color:var(--teal-soft);
+    margin:0;
+  }
+
+  .venue-block{margin-top:52px;}
+  h2.venue{
+    font-size:1.3rem;
+    font-weight:600;
+    color:var(--teal);
+    margin:0 0 4px;
+    text-align:center;
+  }
+  .venue-sub{
+    text-align:center;
+    font-size:0.88rem;
+    color:var(--sun);
+    opacity:0.9;
+    margin:0 0 20px;
+    font-weight:600;
+  }
+
+  .batches{display:flex;flex-direction:column;gap:14px;}
+  a.batch{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:18px 20px;
+    text-decoration:none;
+    color:var(--teal);
+    box-shadow:0 1px 2px rgba(60,40,10,0.04);
+    transition:border-color .15s ease, transform .15s ease;
+  }
+  a.batch:hover{border-color:var(--sun);transform:translateY(-1px);}
+  a.batch:focus-visible{outline:2px solid var(--sun);outline-offset:3px;}
+
+  .icon{
+    flex:0 0 auto;
+    width:38px;height:38px;
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    background:var(--sky-horizon);
+  }
+  .icon svg{width:20px;height:20px;stroke:var(--sun);fill:none;stroke-width:1.6;}
+
+  .batch-info{display:flex;flex-direction:column;gap:2px;flex:1;}
+  .batch-name{font-weight:600;font-size:1rem;}
+  .batch-time{font-size:0.86rem;color:var(--teal-soft);}
+  .batch-cta{
+    font-size:0.85rem;
+    color:var(--sun);
+    font-weight:600;
+    white-space:nowrap;
+  }
+
+  footer{
+    margin-top:56px;
+    text-align:center;
+    font-size:0.85rem;
+    color:var(--teal-soft);
+    opacity:0.75;
+  }
+
+  @media (max-width:420px){
+    h1{font-size:1.9rem;}
+    .sky{padding:32px 16px 4px;}
+  }
+</style>
+</head>
+<body>
+  <div class="sky">
+    <div class="sky-scene">
+      <svg viewBox="0 0 340 190" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <!-- rising half sun with rays, low on the horizon -->
+        <line x1="170" y1="70" x2="170" y2="42" stroke="#F1B15E" stroke-width="2" stroke-linecap="round"/>
+        <line x1="132" y1="80" x2="112" y2="58" stroke="#F1B15E" stroke-width="2" stroke-linecap="round"/>
+        <line x1="208" y1="80" x2="228" y2="58" stroke="#F1B15E" stroke-width="2" stroke-linecap="round"/>
+        <line x1="104" y1="112" x2="76" y2="106" stroke="#F1B15E" stroke-width="2" stroke-linecap="round"/>
+        <line x1="236" y1="112" x2="264" y2="106" stroke="#F1B15E" stroke-width="2" stroke-linecap="round"/>
+        <path d="M118 138 A52 52 0 0 1 222 138 Z" fill="#E2933A"/>
+        <line x1="30" y1="138" x2="310" y2="138" stroke="#F1B15E" stroke-width="1.2" opacity="0.5"/>
+      </svg>
+      <span class="swan-emoji" role="img" aria-label="Swan">🦢</span>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <header>
+      <p class="eyebrow">THE ART OF LIVING</p>
+      <h1>Happiness Program<br>Mysore</h1>
+      <p class="dates">29 – 31 October 2026</p>
+    </header>
+
+    <div class="venue-block">
+      <h2 class="venue">Negilayogi Samaja</h2>
+      <p class="venue-sub">Jayanagar</p>
+      <div class="batches">
+        <a class="batch" href="https://aolt.in/1056887" target="_blank" rel="noopener">
+          <span class="icon"><svg viewBox="0 0 24 24"><path d="M12 3v6M4.2 10.8l1.4 1.4M19.8 10.8l-1.4 1.4M2 17h20M5 17a7 7 0 0 1 14 0"/></svg></span>
+          <span class="batch-info">
+            <span class="batch-name">Morning Batch</span>
+            <span class="batch-time">6:00 – 8:30 am</span>
+          </span>
+          <span class="batch-cta">Join →</span>
+        </a>
+        <a class="batch" href="https://aolt.in/1058156" target="_blank" rel="noopener">
+          <span class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v3M12 19v3M4.2 4.2l2 2M17.8 17.8l2 2M2 12h3M19 12h3M4.2 19.8l2-2M17.8 6.2l2-2"/></svg></span>
+          <span class="batch-info">
+            <span class="batch-name">Afternoon Batch</span>
+            <span class="batch-time">11:00 am – 1:30 pm</span>
+          </span>
+          <span class="batch-cta">Join →</span>
+        </a>
+        <a class="batch" href="https://aolt.in/1058163" target="_blank" rel="noopener">
+          <span class="icon"><svg viewBox="0 0 24 24"><path d="M12 3v6M4.2 13.2l1.4-1.4M19.8 13.2l-1.4-1.4M2 17h20M5 17a7 7 0 0 1 14 0"/></svg></span>
+          <span class="batch-info">
+            <span class="batch-name">Evening Batch</span>
+            <span class="batch-time">6:00 – 8:30 pm</span>
+          </span>
+          <span class="batch-cta">Join →</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="venue-block">
+      <h2 class="venue">Art of Living Ashram</h2>
+      <p class="venue-sub">Lalithadripura</p>
+      <div class="batches">
+        <a class="batch" href="https://programs.vvmvp.org/events/4398" target="_blank" rel="noopener">
+          <span class="icon"><svg viewBox="0 0 24 24"><path d="M12 3v6M4.2 10.8l1.4 1.4M19.8 10.8l-1.4 1.4M2 17h20M5 17a7 7 0 0 1 14 0"/></svg></span>
+          <span class="batch-info">
+            <span class="batch-name">Morning Batch</span>
+            <span class="batch-time">6:00 – 8:30 am</span>
+          </span>
+          <span class="batch-cta">Join →</span>
+        </a>
+        <a class="batch" href="https://programs.vvmvp.org/events/4398" target="_blank" rel="noopener">
+          <span class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v3M12 19v3M4.2 4.2l2 2M17.8 17.8l2 2M2 12h3M19 12h3M4.2 19.8l2-2M17.8 6.2l2-2"/></svg></span>
+          <span class="batch-info">
+            <span class="batch-name">Afternoon Batch</span>
+            <span class="batch-time">11:00 am – 1:30 pm</span>
+          </span>
+          <span class="batch-cta">Join →</span>
+        </a>
+        <a class="batch" href="https://programs.vvmvp.org/events/4398" target="_blank" rel="noopener">
+          <span class="icon"><svg viewBox="0 0 24 24"><path d="M12 3v6M4.2 13.2l1.4-1.4M19.8 13.2l-1.4-1.4M2 17h20M5 17a7 7 0 0 1 14 0"/></svg></span>
+          <span class="batch-info">
+            <span class="batch-name">Evening Batch</span>
+            <span class="batch-time">6:00 – 8:30 pm</span>
+          </span>
+          <span class="batch-cta">Join →</span>
+        </a>
+      </div>
+    </div>
+
+    <footer>Tap a batch to register — no ads, no waiting.</footer>
+  </div>
+</body>
+</html>
